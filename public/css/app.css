@@ -460,3 +460,58 @@ textarea.form-input {
     margin: auto;
   }
 }
+
+/*REGISTRO */
+main{
+  padding: 10px;
+}
+.main_registro{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.h1_register{
+  margin: 15px 0;
+}
+.articulo_registro_main{
+  margin: 15px 0;
+}
+.imput_register{
+  width: 95%;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.btn_enviar_registro{
+  width: 20%;
+  height: 40px;
+  background-color: var(--light-blue);
+  color: white;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+}
+.btn_reset_registro{
+  width: 20%;
+  height: 40px;
+  background-color: var(--light-blue);
+  color: white;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+}
+
+@media(min-width: 768px){
+  .main_registro{
+      text-align: center;
+  }
+  .imput_register{
+      width: 50%;
+      height: 35px;
+  }
+}
+
+@media  (min-width: 1024px){
+  .imput_register{
+      width: 35%;
+      height: 35px;
+  }
+}

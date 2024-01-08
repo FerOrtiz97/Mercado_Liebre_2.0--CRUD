@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario Registro'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <main>
+        <form  class="main_registro" accion="/users/register" method="post">
+                <section>
+                    <h4 class="h1_register">Datos Personales</h4>
+                    <article class="articulo_registro_main">
+                        <label for="name"></label>
+                        <input class="imput_register" type="text" name="name" id="name" placeholder="Ingresa nombre"  value="<%= locals.old && old.nombre %>">
+                        <p> <%= locals.error && error.name? error.name.msg : null %> </p>
+                    </article>
+                    <article class="articulo_registro_main">
+                        <label for="lastname"></label>
+                        <input class="imput_register" type="text" name="lastname" id="usuario" placeholder="Ingresa tu apellido" value="<%= locals.old && old.apellido %>">
+                        <p> <%= locals.error && error.lastname ? error.lastname.msg : null %> </p>
+                    </article>
+                    <article class="articulo_registro_main">
+                        <label for="email"></label>
+                        <input class="imput_register" type="email" name="email" id="email" placeholder="Ingresa tu email"  value="<%= locals.old && old.email %>">
+                        <p> <%= locals.error && error.email ? error.email.msg : null %> </p>
+                    </article>
+                </section>
+                <section>
+                    <article class="articulo_registro_main">
+                        <h4 class="h1_register">Seguridad</h4>
+                        <label for="password"></label>
+                        <input class="imput_register" type="password" name="password" id="password" placeholder="Ingresa contraseña" required>
+					</article>
+                </section>
+                    <article class="articulo_registro_main">
+                        <button class="btn_enviar_registro" type="submit">REGISTRAR</button>
+                        <button type="reset" class="btn_reset_registro">BORRAR</button>
+                    </article>
+            </form>
+</main>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
